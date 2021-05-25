@@ -1,0 +1,12 @@
+.DS_STORE
+
+backup/*
+!backup/.keep
+
+swap/*
+!swap/.keep
+
+undo/*
+!undo/.keep
+
+plugged/*
