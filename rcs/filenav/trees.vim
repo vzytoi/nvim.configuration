@@ -1,9 +1,4 @@
 
-if has('persistent_undo')
-    set undodir=$HOME/AppData/Local/nvim/undo
-    set undofile
-endif
-
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
 

@@ -8,3 +8,8 @@ set autoread
 set termencoding=utf-8
 set encoding=utf-8
 set fileencoding=utf-8
+
+if has('persistent_undo')
+    set undodir=$HOME/AppData/Local/nvim/undo
+    set undofile
+endif
