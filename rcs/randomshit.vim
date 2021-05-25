@@ -7,6 +7,15 @@ set backspace=indent,eol,start
 " vim splits auto resize when resized
 autocmd VimResized * wincmd =
 
+set nowrap
+nnoremap <silent> <a-g> :Goyo<cr>
+set scrolloff=8
+
+" :pwd = current file
+" scroll
+set mouse=a
+autocmd BufEnter * silent! lcd %:p:h
+
 " trim white space
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -15,6 +24,15 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
+
+set nuw=4
+set rnu
+function ToggleNuRnu()
+    execute "set nu!"
+    execute "set rnu!"
+endfunction
+nnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
+vnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
 
 " delete terminal buffer when the term is exited
 augroup terminal_settings
@@ -26,26 +44,13 @@ augroup terminal_settings
                 \   call nvim_input('<CR>')  |
                 \ endif
 augroup END
-
-" :pwd = current file
-autocmd BufEnter * silent! lcd %:p:h
-
-set nowrap
-set nuw=4
-set rnu
-
-function ToggleNuRnu()
-    execute "set nu!"
-    execute "set rnu!"
-endfunction
-
-nnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
-vnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
-
-nnoremap <silent> <a-g> :Goyo<cr>
-
 nnoremap <a-s> :vnew term://bash<cr>
-tnoremap <a-s> exit<cr>
+tnoremap <a-s> <c-\><c-N>:bd!<cr>
+tnoremap <esc> <c-\><c-N>
+tnoremap <a-h> <c-\><c-N><c-w>W
+tnoremap <a-j> <c-\><c-N><c-w>j
+tnoremap <a-k> <c-\><c-N><c-w>k
+tnoremap <a-l> <c-\><c-N><c-w>w
 
 " focus split (alt o)
 function! ToggleZoom(toggle)
@@ -57,14 +62,7 @@ function! ToggleZoom(toggle)
         vert resize | resize
     endi
 endfunction
-
 nnoremap <silent> <a-o> :call ToggleZoom(v:true)<CR>
-
 augroup restorezoom
     au WinEnter * silent! :call ToggleZoom(v:false)
 augroup ENDnoremap
-
-set scrolloff=8
-
-" scroll
-set mouse=a
