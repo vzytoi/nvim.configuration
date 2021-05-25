@@ -21,6 +21,8 @@ runtime! rcs/filenav/ctrlp.vim
 
 runtime! rcs/workflow/indents.vim
 runtime! rcs/workflow/linesopp.vim
+runtime! rcs/workflow/search.vim
+runtime! rcs/workflow/term.vim
 
 runtime! rcs/fsettings.vim
 runtime! rcs/hardmode.vim
@@ -29,5 +31,3 @@ runtime! rcs/randomshit.vim
 runtime! rcs/startify.vim
 
 runtime! rcs/filenav/trees.vim
-
-runtime! rcs/search.vim
