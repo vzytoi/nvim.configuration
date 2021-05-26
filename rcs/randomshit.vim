@@ -6,7 +6,6 @@ let mapleader = " "
 set nowrap
 set scrolloff=8
 set mouse=a
-set nuw=4
 
 " remove bells
 set vb t_vb=

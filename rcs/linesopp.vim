@@ -14,6 +14,7 @@ endfor
 " toggle relative lines number and lines number
 
 set rnu
+set nuw=4
 
 function ToggleNuRnu()
     execute "set nu!"
