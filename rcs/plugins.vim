@@ -12,4 +12,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'Jorengarenar/vim-MvVis'
 Plug 'tpope/vim-fugitive'
+Plug 'wellle/targets.vim'
+Plug 'tpope/vim-surround'
 call plug#end()

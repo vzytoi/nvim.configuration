@@ -1,3 +1,4 @@
+set lazyredraw
 filetype indent plugin on
 syntax on
 syntax enable
@@ -7,7 +8,7 @@ set scrolloff=8
 set mouse=a
 set nuw=4
 
-" remove bells autocmd! GUIEnter * set vb t_vb=
+" remove bells
 set vb t_vb=
 
 " allow backspacing over everything in insert mode

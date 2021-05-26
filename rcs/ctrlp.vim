@@ -1,4 +1,5 @@
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_map = '<a-s-e>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -21,6 +22,7 @@ let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
 
 func! MyCtrlPMappings()
     nnoremap <buffer> <silent> <a-d> :silent! call <sid>DeleteBuffer()<cr>
+    nnoremap <buffer> <silent> <a-s-e> <c-c>
 endfunc
 
 func! s:DeleteBuffer()
