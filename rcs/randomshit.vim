@@ -2,6 +2,14 @@ filetype indent plugin on
 syntax on
 syntax enable
 let mapleader = " "
+set nowrap
+set scrolloff=8
+set mouse=a
+set nuw=4
+set rnu
+" Remove certain character from file name pattern matching
+set isfname-==
+set isfname-=,
 
 " remove bells autocmd! GUIEnter * set vb t_vb=
 set vb t_vb=
@@ -12,18 +20,7 @@ set backspace=indent,eol,start
 " vim splits auto resize when resized
 autocmd VimResized * wincmd =
 
-set nowrap
-
-nnoremap <silent> <a-g> :Goyo<cr>
-
-set scrolloff=8
-
-" Remove certain character from file name pattern matching
-set isfname-==
-set isfname-=,
 " :pwd = current file
-" scroll
-set mouse=a
 autocmd BufEnter * silent! lcd %:p:h
 
 " trim white space
@@ -35,14 +32,10 @@ fun! TrimWhitespace()
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
 
-set nuw=4
-set rnu
 function ToggleNuRnu()
     execute "set nu!"
     execute "set rnu!"
 endfunction
-nnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
-vnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
 
 " focus split (alt o)
 function! ToggleZoom(toggle)
@@ -54,7 +47,6 @@ function! ToggleZoom(toggle)
         vert resize | resize
     endi
 endfunction
-nnoremap <silent> <a-o> :call ToggleZoom(v:true)<CR>
 augroup restorezoom
     au WinEnter * silent! :call ToggleZoom(v:false)
 augroup ENDnoremap
@@ -86,3 +78,8 @@ augroup resume_edit_position
   autocmd BufReadPost *
         \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' | execute "normal! g`\"zvzz" | endif
 augroup END
+
+nnoremap <silent> <a-o> :call ToggleZoom(v:true)<CR>
+nnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
+vnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
+nnoremap <silent> <a-g> :Goyo<cr>
