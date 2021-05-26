@@ -29,6 +29,7 @@ let s:col.type       = ['#7398dd', 104]
 let s:col.constant   = ['#ca70d6', 170]
 let s:col.error      = ['#c15959', 131]
 let s:col.none       = ['NONE', 'NONE']
+
 " }}}
 " Highlighting Function from https://github.com/sjl/badwolf {{{
 function! s:HL(group, fg, ...)

@@ -1,15 +1,16 @@
 
 colorscheme sitruuna
-
 set background=dark
 
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
-
-if (has("termguicolors"))
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+if has("termguicolors")
     set termguicolors
 endif
+
+if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
+    let &t_Co = 256
+endif
+
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
 
 " focus split (alt o)
 function! ToggleZoom(toggle)

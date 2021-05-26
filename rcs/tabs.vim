@@ -1,2 +1,2 @@
-nnoremap <silent> <TAB> :tabnext<CR>
-nnoremap <silent> <S-TAB> :tabprevious<CR>
+nnoremap <silent> <a-ù> :tabnext<CR>
+nnoremap <silent> <a-*> :tabprevious<CR>
