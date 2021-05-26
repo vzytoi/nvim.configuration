@@ -1,3 +1,7 @@
+"get rid of [  ] around icons in NerdTree
+if exists("g:loaded_webdevicons")
+    call webdevicons#refresh()
+endif
 
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
@@ -17,11 +21,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 " close vim when nerdtree is the last window
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
             \ quit | endif
-
-"get rid of [  ] around icons in NerdTree
-if exists("g:loaded_webdevicons")
-    call webdevicons#refresh()
-endif
 
 " sync tree with current openned file
 autocmd BufRead * call SyncTree()
