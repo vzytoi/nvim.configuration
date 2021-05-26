@@ -20,7 +20,7 @@ let g:ctrlp_user_command = ['.hg', 'hg --cwd %s locate -I .']
 let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
 
 func! MyCtrlPMappings()
-    nnoremap <buffer> <silent> <a-d> :call <sid>DeleteBuffer()<cr>
+    nnoremap <buffer> <silent> <a-d> :silent! call <sid>DeleteBuffer()<cr>
 endfunc
 
 func! s:DeleteBuffer()
