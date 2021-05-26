@@ -8,5 +8,16 @@ for i in range(1, 50)
         let arr = add(arr, nkeys[l])
     endfor
     execute 'nnoremap '. join(arr, '').'<leader> '.i.'k'
-    execute 'nnoremap <leader>'. join(arr, '').' '.i.'j'
+    execute 'nnoremap ²'. join(arr, '').'<leader> '.i.'j'
 endfor
+
+" toggle relative lines number and lines number
+
+set rnu
+
+function ToggleNuRnu()
+    execute "set nu!"
+    execute "set rnu!"
+endfunction
+
+nnoremap <silent> <leader>n :call ToggleNuRnu()<CR>

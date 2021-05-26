@@ -6,19 +6,12 @@ set nowrap
 set scrolloff=8
 set mouse=a
 set nuw=4
-set rnu
-" Remove certain character from file name pattern matching
-set isfname-==
-set isfname-=,
 
 " remove bells autocmd! GUIEnter * set vb t_vb=
 set vb t_vb=
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" vim splits auto resize when resized
-autocmd VimResized * wincmd =
 
 " :pwd = current file
 autocmd BufEnter * silent! lcd %:p:h
@@ -31,25 +24,6 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
-
-function ToggleNuRnu()
-    execute "set nu!"
-    execute "set rnu!"
-endfunction
-
-" focus split (alt o)
-function! ToggleZoom(toggle)
-    if exists("t:restore_zoom") && (t:restore_zoom.win != winnr() || a:toggle == v:true)
-        exec t:restore_zoom.cmd
-        unlet t:restore_zoom
-    elseif a:toggle
-        let t:restore_zoom = { 'win': winnr(), 'cmd': winrestcmd() }
-        vert resize | resize
-    endi
-endfunction
-augroup restorezoom
-    au WinEnter * silent! :call ToggleZoom(v:false)
-augroup ENDnoremap
 
 " Automatically reload the file if it is changed outside of Nvim, see
 " https://unix.stackexchange.com/a/383044/221410. It seems that `checktime`
@@ -79,7 +53,5 @@ augroup resume_edit_position
         \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit' | execute "normal! g`\"zvzz" | endif
 augroup END
 
-nnoremap <silent> <a-o> :call ToggleZoom(v:true)<CR>
-nnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
-vnoremap <silent> <leader>n :call ToggleNuRnu()<CR>
-nnoremap <silent> <a-g> :Goyo<cr>
+vnoremap <silent> <a-c> :call NERDComment(0,"toggle")<CR>
+nnoremap <silent> <a-c> :call NERDComment(0,"toggle")<CR>
