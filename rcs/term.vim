@@ -1,5 +1,5 @@
 nnoremap <a-s> :vnew term://bash<cr>A
-tnoremap <a-s> <c-\><c-N>:bd!<cr>
+tnoremap <silent> <a-s> I<c-\><c-N>:bd!<cr>
 
 tnoremap <esc> <c-\><c-N>
 
