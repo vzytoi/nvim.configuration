@@ -1,4 +1,4 @@
-nnoremap <a-s> :vnew term://bash<cr>
+nnoremap <a-s> :vnew term://bash<cr>A
 tnoremap <a-s> <c-\><c-N>:bd!<cr>
 
 tnoremap <esc> <c-\><c-N>
