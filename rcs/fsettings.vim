@@ -1,6 +1,6 @@
-set directory^=$CONFIG_PATH/tmp/undo//
-set backupdir^=$CONFIG_PATH/tmp/swap//
-set directory^=$CONFIG_PATH/tmp/swap//
+set directory^=$LOCALAPPDATA/nvim/tmp/undo//
+set backupdir^=$LOCALAPPDATA/nvim/tmp/swap//
+set directory^=$LOCALAPPDATA/nvim/tmp/swap//
 
 set modifiable
 set autoread
@@ -10,6 +10,6 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 if has('persistent_undo')
-    set undodir=$CONFIG_PATH/tmp/undo/
+    set undodir=$LOCALAPPDATA/nvim/tmp/undo/
     set undofile
 endif

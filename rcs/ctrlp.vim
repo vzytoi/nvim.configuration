@@ -10,7 +10,7 @@ let g:ctrlp_max_files = 1000
 let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
 
 " ~/AppData/Local/nvim/txt/ctrlp_ignore.txt (for gf)
-let s:ignore_file = readfile(stdpath('config') . '\txt\ctrlp_ignore.txt')
+let s:ignore_file = readfile(stdpath('config').'\txt\ctrlp_ignore.txt')
 let s:deli = index(s:ignore_file, '')
 
 let g:ctrlp_custom_ignore = {
