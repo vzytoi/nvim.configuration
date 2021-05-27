@@ -7,17 +7,16 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_files = 1000
 
-  let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v(\.git|undo|plugged|swap)$',
-    \ 'file': '\v\.(exe|zip)$',
-    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-    \ }
-
 let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
+
+let s:ignore_exts = join(readfile(stdpath('config').'\txt\ctrlp_ignore.txt'), '\|')
+let g:ctrlp_custom_ignore = {
+        \   'dir' : '\.git\|plugged\|undo' ,
+        \   'file' : '\.\('.s:ignore_exts.'\)$'
+        \ }
 
 func! MyCtrlPMappings()
     nnoremap <buffer> <silent> <a-d> :silent! call <sid>DeleteBuffer()<cr>
-    nnoremap <buffer> <silent> <a-s-e> <c-c>
 endfunc
 
 func! s:DeleteBuffer()

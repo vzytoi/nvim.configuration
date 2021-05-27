@@ -1,18 +1,16 @@
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
-
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
+let NERDTreeRespectWildIgnore=1
 
 "get rid of [  ] around icons in NerdTree
 if exists("g:loaded_webdevicons")
     call webdevicons#refresh()
 endif
-
-let g:NERDTreeIgnore = ['\v\.(git|exe|ddl|zip|swp)$']
 
 " prevent other window form replacing nerdtree in its own
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
@@ -22,9 +20,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
             \ quit | endif
 
-" sync tree with current openned file
-autocmd BufRead * call SyncTree()
-
 function ToggleNERDTreeM()
     try
         execute "NERDTreeToggle %"
@@ -32,6 +27,9 @@ function ToggleNERDTreeM()
         execute "NERDTreeToggle"
     endtry
 endfunction
+
+" sync tree with current openned file
+autocmd BufRead * call SyncTree()
 
 function! IsNERDTreeOpen()
     return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
