@@ -1,12 +1,9 @@
 .DS_STORE
 
-tmp/backup/*
-!tmp/backup/.keep
-
 tmp/swap/*
 !tmp/swap/.keep
 
 tmp/undo/*
 !tmp/undo/.keep
 
-tmp/plugged/*
+plugged/*
