@@ -1,3 +1,5 @@
+set nocompatible
+set autochdir
 set lazyredraw
 filetype indent plugin on
 syntax on
@@ -14,7 +16,7 @@ set vb t_vb=
 set backspace=indent,eol,start
 
 " :pwd = current file
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 
 " trim white space
 fun! TrimWhitespace()

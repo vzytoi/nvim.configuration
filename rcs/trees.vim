@@ -1,11 +1,14 @@
-let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
 let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize=37
+
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
-let NERDTreeRespectWildIgnore=1
+
+let g:undotree_SetFocusWhenToggle = 1
 
 "get rid of [  ] around icons in NerdTree
 if exists("g:loaded_webdevicons")

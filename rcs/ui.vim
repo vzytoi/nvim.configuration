@@ -12,6 +12,8 @@ endif
 
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
 
+set statusline=%f
+
 " focus split (alt o)
 function! ToggleZoom(toggle)
     if exists("t:restore_zoom") && (t:restore_zoom.win != winnr() || a:toggle == v:true)
