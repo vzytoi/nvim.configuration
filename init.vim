@@ -9,7 +9,8 @@
 " github : https://github.com/vzytoi/nvim.configuration
 " author : cyprien.henner@icloud.com
 
-let mapleader = '\<Space>'
+nnoremap <space> <nop>
+let mapleader = ' '
 
 let g:file_ignore = ['example.vim', 'otherfile.vim']
 for g:vim_file in split(globpath(stdpath('config')."/rcs/", '*.vim'), '\n')
