@@ -1,16 +1,18 @@
 
-colorscheme sitruuna
+syntax on
 set background=dark
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if has("termguicolors")
     set termguicolors
 endif
-
 if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
     let &t_Co = 256
 endif
 
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
+colorscheme xcodedarkhc
+
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
 
 set statusline=%f
 
