@@ -33,10 +33,14 @@ let g:keymapmods = "insert,visual,terminal,normal"
 let g:arrows = ['<Left>', '<Right>', '<Up>', '<Down>']
 
 for s:mod in split(g:keymapmods, ',')
+    let s:m = split(s:mod, '\zs')[0]
+    execute s:m.'noremap <a-c> <esc>'
     for s:arrow in g:arrows
-      execute split(s:mod, '\zs')[0]."noremap ".s:arrow." <Nop>"
+      execute s:m."noremap ".s:arrow." <Nop>"
     endfor
 endfor
 
 nnoremap <silent> <Tab> :tabnext<CR>
 nnoremap <silent> <s-Tab> :tabprevious<CR>
+nnoremap <silent> <leader>l :SidewaysRight<cr>
+nnoremap <silent> <leader>h :SidewaysLeft<cr>

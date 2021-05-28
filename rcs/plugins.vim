@@ -17,4 +17,7 @@ Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-repeat'
+Plug 'andrewradev/splitjoin.vim'
+Plug 'AndrewRadev/sideways.vim'
+Plug 'andymass/vim-matchup'
 call plug#end()
