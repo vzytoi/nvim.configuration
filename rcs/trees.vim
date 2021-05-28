@@ -47,3 +47,4 @@ endfunction
 
 nnoremap <silent> <a-u> :UndotreeToggle<cr>
 nnoremap <silent> <a-e> :call ToggleNERDTreeM()<cr>
+vnoremap <silent> <a-e> <esc>:call ToggleNERDTreeM()<cr>

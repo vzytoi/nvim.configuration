@@ -13,3 +13,5 @@ nnoremap <silent> <leader>s :let @/=""<CR>
 
 nnoremap n nzz
 nnoremap N Nzz
+
+let g:loaded_matchit = 1

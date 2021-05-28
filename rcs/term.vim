@@ -10,3 +10,5 @@ tnoremap <a-l> <c-\><c-N><c-w>w
 
 tnoremap <silent> <c-h> <c-\><c-N>:call SplitResize("h")<CR>
 tnoremap <silent> <c-l> <c-\><c-N>:call SplitResize("l")<CR>
+
+let g:python3_host_prog = 'C:\\Users\\Cyprien\\AppData\\Local\\Programs\\Python\\Python39'
