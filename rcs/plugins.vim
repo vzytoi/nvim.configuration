@@ -15,5 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'wellle/targets.vim'
 Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
-Plug 'mhinz/vim-grepper'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-repeat'
 call plug#end()

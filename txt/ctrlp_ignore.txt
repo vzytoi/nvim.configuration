@@ -5,6 +5,7 @@ bin
 ddl
 db
 dat
+zip
 
 \.git
 plugged
