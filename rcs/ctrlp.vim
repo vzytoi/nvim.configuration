@@ -7,7 +7,15 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_files = 1000
 
+let g:ctrlp_open_multiple_files = "t"
+
 let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
+
+let g:ctrlp_prompt_mappings = {
+            \ 'AcceptSelection("v")': ['<a-v>', '<RightMouse>'],
+            \ 'OpenMulti()':          ['<a-o>'],
+            \ 'PrtExit()':            ['<esc>', '<c-c>', '<a-s-e>']
+            \ }
 
 " ~/AppData/Local/nvim/txt/ctrlp_ignore.txt (for gf)
 let s:ignore_file = readfile(stdpath('config').'\txt\ctrlp_ignore.txt')
