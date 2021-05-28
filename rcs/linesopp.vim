@@ -23,4 +23,4 @@ function ToggleNuRnu()
     execute "set rnu!"
 endfunction
 
-nnoremap <silent> <leader>ln :call ToggleNuRnu()<cr>
+nnoremap <silent> <leader>n :call ToggleNuRnu()<cr>

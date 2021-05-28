@@ -7,3 +7,5 @@ tmp/undo/*
 !tmp/undo/.keep
 
 plugged/*
+
+tests/*
