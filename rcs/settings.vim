@@ -4,6 +4,8 @@ set lazyredraw
 filetype indent plugin on
 let mapleader = " "
 set nowrap
+set ttimeout
+set ttimeoutlen=100
 set scrolloff=8
 set mouse=a
 " remove bells
@@ -13,4 +15,8 @@ set backspace=indent,eol,start
 set wildmenu
 set wildmode=longest:full,list:full
 set completeopt=menuone,noinsert,noselect
-let g:completion_matching_strategy_list = ['extact', 'substring', 'fuzzy']
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
+endif
+set nrformats+=alpha
+set clipboard=unnamedplus
