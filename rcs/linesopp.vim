@@ -1,6 +1,6 @@
 " remap &<leader> to 1k and <leader>& to 1j up to 50
 
-set timeoutlen=300
+set timeoutlen=500
 
 let nkeys = {'1':"&",'2':"é",'3':'"','4':"'",'5':"(",'6':"-",'7':"è",'8':"_",'9':"ç",'0':"à"}
 

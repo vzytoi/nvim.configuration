@@ -1,11 +1,11 @@
-set wildignore+=*/.git/*
 set autochdir
+autocmd BufEnter * silent! lcd %:p:h
+
+set wildignore+=*/.git/*
 set lazyredraw
 filetype indent plugin on
 let mapleader = " "
 set nowrap
-set ttimeout
-set ttimeoutlen=100
 set scrolloff=8
 set mouse=a
 " remove bells
@@ -19,4 +19,7 @@ if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j " Delete comment character when joining commented lines
 endif
 set nrformats+=alpha
-set clipboard=unnamedplus
+
+set spelllang=en_us,fr
+nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
+nnoremap U <c-r>

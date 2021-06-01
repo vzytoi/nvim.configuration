@@ -19,4 +19,9 @@ Plug 'tpope/vim-repeat' " press . to repeat plugins functions
 Plug 'AndrewRadev/sideways.vim' " change order of function arguments or lst
 Plug 'andymass/vim-matchup' " matching word
 Plug 'wincent/scalpel' " <leader>e for changing all occurences
+Plug 'haya14busa/incsearch.vim' " auto remove higlight
+Plug 'osyo-manga/vim-anzu' " search index
+Plug 'nikvdp/ejs-syntax'
+Plug 'alvan/vim-closetag'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()

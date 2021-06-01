@@ -1,3 +1,4 @@
+
 let g:undotree_ShortIndicators = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -9,11 +10,6 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
 let g:undotree_SetFocusWhenToggle = 1
-
-"get rid of [  ] around icons in NerdTree
-if exists("g:loaded_webdevicons")
-    call webdevicons#refresh()
-endif
 
 " prevent other window form replacing nerdtree in its own
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
@@ -30,6 +26,8 @@ function ToggleNERDTreeM()
         execute "NERDTreeToggle"
     endtry
 endfunction
+
+autocmd FileType nerdtree nnoremap <buffer> <silent> <a-s> <nop>
 
 " sync tree with current openned file
 autocmd BufRead * call SyncTree()

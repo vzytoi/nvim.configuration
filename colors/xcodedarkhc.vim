@@ -58,7 +58,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi Cursor guifg=#1f1f24 guibg=#ffffff gui=NONE cterm=NONE
   hi None guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
   hi CursorLineNr guifg=#ffffff guibg=#26262b gui=NONE cterm=NONE
-  hi EndOfBuffer guifg=#1f1f24 guibg=#1f1f24 gui=NONE cterm=NONE
+  hi EndOfBuffer guifg=darkgray ctermfg=red ctermbg=red
   hi FoldColumn guifg=#52555c guibg=NONE gui=NONE cterm=NONE
   hi Folded guifg=#52555c guibg=#34353b gui=NONE cterm=NONE
   hi LineNr guifg=#52555c guibg=NONE gui=NONE cterm=NONE
@@ -103,7 +103,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi Title guifg=#ffffff guibg=NONE gui=bold cterm=bold
   hi Todo guifg=#aeb7c0 guibg=NONE gui=bold cterm=bold
   hi Underlined guifg=#6bdfff guibg=NONE gui=underline cterm=underline
-  hi SpellBad guifg=NONE guibg=NONE gui=undercurl ctermfg=NONE ctermbg=NONE cterm=undercurl
+  hi SpellBad guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=undercurl
   hi SpellCap guifg=NONE guibg=NONE gui=undercurl ctermfg=NONE ctermbg=NONE cterm=undercurl
   hi SpellLocal guifg=NONE guibg=NONE gui=undercurl ctermfg=NONE ctermbg=NONE cterm=undercurl
   hi SpellRare guifg=NONE guibg=NONE gui=undercurl ctermfg=NONE ctermbg=NONE cterm=undercurl
