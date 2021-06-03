@@ -3,8 +3,9 @@ Plug 'mhinz/vim-startify'
 Plug 'bronson/vim-visual-star-search' " * search on visual selection
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree'
-Plug 'PhilRunninger/nerdtree-visual-selection'
+" Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'ryanoasis/vim-devicons' " icons in nerd tree
 Plug 'junegunn/goyo.vim' " <a-g> for zen mode
 Plug 'justinmk/vim-sneak' " allow s searching
@@ -23,5 +24,4 @@ Plug 'haya14busa/incsearch.vim' " auto remove higlight
 Plug 'osyo-manga/vim-anzu' " search index
 Plug 'nikvdp/ejs-syntax'
 Plug 'alvan/vim-closetag'
-Plug 'neovim/nvim-lspconfig'
 call plug#end()

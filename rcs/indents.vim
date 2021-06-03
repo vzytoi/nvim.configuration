@@ -22,7 +22,7 @@ function! Indent()
     call Preserve('normal gg=G')
 endfunction
 
-nnoremap <silent> <a-i> :call Indent()<cr>
+nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
 nnoremap < <<
 nnoremap > >>

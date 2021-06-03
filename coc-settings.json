@@ -1,0 +1,45 @@
+{
+  /* explorere */
+  "explorer.width": 35,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.position": "right",
+  "explorer.file.showHiddenFiles": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings.global": {
+    "dd": "delete",
+    "?": "help",
+    "R": "refresh",
+    "yy": "copyFile",
+    "X": "cutFile",
+    "P": "pasteFile",
+    "mf": "addFile",
+    "md": "addDirectory",
+    "r": "rename",
+    "gb": "gotoSource:buffer",
+    "gf": "gotoSource:file",
+    "v": "open:vsplit",
+    ".": "toggleHidden",
+    "f": "search",
+    "t": "open:tab",
+    "<esc>": "esc",
+    "q": "quit",
+    "e": "open",
+    "pc": "preview:content",
+    "pl": "preview:labeling"
+
+  },
+  /* auto completion */
+  "suggest.maxCompleteItemCount": 6,
+  /* errors */
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  /* discord */
+  "rpc.workspaceElapsedTime": true,
+  "rpc.idleTimeout": 0,
+  "rpc.idleText": "<3",
+  "rpc.largeImage": "fuck u",
+  "rpc.lowerDetailsEditing": "{filename}",
+  "rpc.detailsEditing": "{currentline} of {totallines} lines",
+  "rpc.showProblems": false
+}

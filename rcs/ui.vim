@@ -14,7 +14,12 @@ colorscheme xcodedarkhc
 
 " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
 
-set statusline=%f
+set laststatus=2
+set statusline=
+set statusline+=\ %l
+set statusline+=:
+set statusline+=%L
+set statusline+=\ \ %t
 
 " focus split (alt o)
 function! ToggleZoom(toggle)

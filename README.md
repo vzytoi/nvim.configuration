@@ -1,4 +1,4 @@
-# vzytoi's nvim config
+#content vzytoi's nvim config
 
 ## install
 ```
