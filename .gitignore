@@ -11,3 +11,4 @@ plugged/*
 tests/*
 
 spell/*
+!spell/.keep
