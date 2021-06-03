@@ -23,3 +23,8 @@ set nrformats+=alpha
 set spelllang=en_us,fr
 nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
 nnoremap U <c-r>
+
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
