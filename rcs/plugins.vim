@@ -9,7 +9,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons' " icons in nerd tree
 Plug 'junegunn/goyo.vim' " <a-g> for zen mode
 Plug 'justinmk/vim-sneak' " allow s searching
-Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'Jorengarenar/vim-MvVis' " move visual selections
 Plug 'tpope/vim-fugitive' " git
