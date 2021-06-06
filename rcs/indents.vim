@@ -1,5 +1,6 @@
 set shiftwidth=4
 set softtabstop=4
+set tabstop=4
 set expandtab
 set smarttab
 set autoindent
@@ -21,8 +22,6 @@ endfunction
 function! Indent()
     call Preserve('normal gg=G')
 endfunction
-
-nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
 nnoremap < <<
 nnoremap > >>
