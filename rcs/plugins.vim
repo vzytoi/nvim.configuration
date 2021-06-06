@@ -23,4 +23,5 @@ Plug 'haya14busa/incsearch.vim' " auto remove higlight
 Plug 'osyo-manga/vim-anzu' " search index
 Plug 'nikvdp/ejs-syntax'
 Plug 'alvan/vim-closetag'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
