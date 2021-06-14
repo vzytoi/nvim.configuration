@@ -54,11 +54,11 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   if !exists('g:xcodedarkhc_dim_punctuation')
     let g:xcodedarkhc_dim_punctuation = 1
   endif
-  hi Normal guifg=#ffffff guibg=#1f1f24 gui=NONE cterm=NONE
+  hi Normal guifg=#ffffff guibg=#1C1B1C gui=NONE cterm=NONE
   hi Cursor guifg=#1f1f24 guibg=#ffffff gui=NONE cterm=NONE
   hi None guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
   hi CursorLineNr guifg=#ffffff guibg=#26262b gui=NONE cterm=NONE
-  hi EndOfBuffer guifg=#1f1f24 guibg=#1f1f24 gui=NONE cterm=NONE
+  hi EndOfBuffer guifg=#1C1B1C guibg=#1C1B1C gui=NONE cterm=NONE
   hi FoldColumn guifg=#52555c guibg=NONE gui=NONE cterm=NONE
   hi Folded guifg=#52555c guibg=#34353b gui=NONE cterm=NONE
   hi LineNr guifg=#52555c guibg=NONE gui=NONE cterm=NONE
