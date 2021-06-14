@@ -3,9 +3,7 @@ Plug 'mhinz/vim-startify'
 Plug 'bronson/vim-visual-star-search' " * search on visual selection
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
-" Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'ryanoasis/vim-devicons' " icons in nerd tree
 Plug 'junegunn/goyo.vim' " <a-g> for zen mode
 Plug 'justinmk/vim-sneak' " allow s searching
@@ -24,4 +22,12 @@ Plug 'osyo-manga/vim-anzu' " search index
 Plug 'nikvdp/ejs-syntax'
 Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+Plug 'codota/tabnine-vim'
+
 call plug#end()
