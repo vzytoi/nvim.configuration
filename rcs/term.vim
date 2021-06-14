@@ -16,5 +16,3 @@ let &shell = has('win32') ? 'powershell' : 'pwsh'
 set shellquote= shellpipe=\| shellxquote=
 set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
 set shellredir=\|\ Out-File\ -Encoding\ UTF8
-
-" let g:python3_host_prog = 'C:\\Users\\Cyprien\\AppData\\Local\\Programs\\Python\\Python39'
