@@ -30,3 +30,7 @@ inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
 nnoremap <leader>g :CocSearch
+
+nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
+
+autocmd FileType javascript let b:coc_pairs_disabled = ['<', '>']
