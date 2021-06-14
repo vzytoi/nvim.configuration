@@ -24,6 +24,7 @@
         "<esc>": "esc",
         "q": "quit",
         "e": "open",
+        "o": "open",
         "pc": "preview:content",
         "pl": "preview:labeling"
     },
