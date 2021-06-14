@@ -10,5 +10,8 @@ plugged/*
 
 tests/*
 
+rcs/ctrlp.vim
+txt/ctrlp_ignore.txt
+
 spell/*
 !spell/.keep
