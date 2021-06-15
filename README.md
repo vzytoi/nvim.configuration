@@ -2,7 +2,7 @@
 
 ## install
 ```
-git -C ~/AppData/Local clone https://github.com/vzytoi/nvim
+git -C ~/AppData/Local clone https://github.com/vzytoi/nvim.configuration
 ```
 ```
 $fonts = (New-Object -ComObject Shell.Application).Namespace(0x14)
