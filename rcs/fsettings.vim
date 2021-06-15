@@ -1,6 +1,6 @@
-set directory^=$HOME/AppData/Local/nvim/nvim/tmp/undo//
-set backupdir^=$HOME/AppData/Local/nvim/nvim/tmp/swap//
-set directory^=$HOME/AppData/Local/nvim/nvim/tmp/swap//
+set directory^=$HOME/AppData/Local/nvim/tmp/undo//
+set backupdir^=$HOME/AppData/Local/nvim/tmp/swap//
+set directory^=$HOME/AppData/Local/nvim/tmp/swap//
 
 set modifiable
 set autoread
