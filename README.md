@@ -11,4 +11,3 @@ Get-ChildItem -Recurse -include *.ttf | % { $fonts.CopyHere($_.fullname) }
 ```
 :so$MYVIMRC|PlugInstall
 ```
-
