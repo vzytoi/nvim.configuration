@@ -24,3 +24,12 @@ augroup term_settings
   " Go to insert mode by default to start typing command
   autocmd TermOpen * startinsert
 augroup END
+
+let g:python3_host_prog = 'C:\Users\Cyprien\AppData\Local\Programs\Python\Python39\python.exe'
+
+function TogglePS()
+  if (expand('%:t') == 'powershell.EXE') | execute "bd!" | else | execute "vsp\|term" | endif
+endfunction
+
+nnoremap <silent> <a-s> :call TogglePS()<CR>
+tnoremap <silent> <a-s> <c-\><c-N>:call TogglePS()<CR>
