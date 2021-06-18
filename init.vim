@@ -17,5 +17,3 @@ for g:vim_file in split(globpath(stdpath('config')."/core/", '*.vim'), '\n')
         execute printf("source %s", g:vim_file)
     endif
 endfor
-
-autocmd FileType markdown let b:coc_suggest_disable = 1

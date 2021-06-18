@@ -28,7 +28,12 @@ augroup END
 let g:python3_host_prog = 'C:\Users\Cyprien\AppData\Local\Programs\Python\Python39\python.exe'
 
 function TogglePS()
-  if (expand('%:t') == 'powershell.EXE') | execute "bd!" | else | execute "vsp\|term" | endif
+  let s:wn = expand('%:t')
+  if s:wn == 'Powershell.EXE'
+    execute "bd!"
+  else
+    execute "vsp\|term"
+  endif
 endfunction
 
 nnoremap <silent> <a-s> :call TogglePS()<CR>
