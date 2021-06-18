@@ -1,5 +1,7 @@
 .DS_STORE
 
+colors/devtools.vim
+
 tmp/swap/*
 !tmp/swap/.keep
 

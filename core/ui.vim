@@ -1,6 +1,4 @@
 
-syntax on
-set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if has("termguicolors")
@@ -10,8 +8,9 @@ if (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256') || has('nvim')
     let &t_Co = 256
 endif
 
-colorscheme xcodedarkhc
-
+syntax enable
+set background=dark
+colorscheme gruvbox
 " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
 
 set laststatus=2
@@ -29,7 +28,7 @@ function! ToggleZoom(toggle)
     elseif a:toggle
         let t:restore_zoom = { 'win': winnr(), 'cmd': winrestcmd() }
         vert resize | resize
-    endi
+    endif
 endfunction
 augroup restorezoom
     au WinEnter * silent! :call ToggleZoom(v:false)
