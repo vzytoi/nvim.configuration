@@ -1,3 +1,33 @@
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+set smarttab
+set autoindent
+set smartindent
+
+function! Preserve(command)
+    let search = @/
+    let cursor_position = getpos('.')
+    normal! H
+    let window_position = getpos('.')
+    call setpos('.', cursor_position)
+    execute a:command
+    let @/ = search
+    call setpos('.', window_position)
+    normal! zt
+    call setpos('.', cursor_position)
+endfunction
+
+function! Indent()
+    call Preserve('normal gg=G')
+endfunction
+
+nnoremap < <<
+nnoremap > >>
+
+vnoremap < <gv
+vnoremap > >gv
 set autochdir
 autocmd BufEnter * silent! lcd %:p:h
 
@@ -27,8 +57,6 @@ inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
-nnoremap <leader>g :CocSearch
-
 nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
 autocmd FileType javascript let b:coc_pairs_disabled = ['<', '>']
@@ -38,7 +66,7 @@ set nostartofline
 
 set formatoptions-=o         " Disable comment-continuation (normal 'o'/'O')
 if v:version > 703 || v:version == 703 && has("patch541")
-  set formatoptions+=j " Delete comment character when joining commented lines
+    set formatoptions+=j " Delete comment character when joining commented lines
 endif
 
 set timeout ttimeout
@@ -62,10 +90,5 @@ if has('persistent_undo')
     set undodir=$HOME/AppData/Local/nvim/tmp/undo/
     set undofile
 endif
-
-set timeout ttimeout
-set timeoutlen=500   " Time out on mappings
-set ttimeoutlen=10   " Time out on key codes
-set updatetime=100   " Idle time to write swap and trigger CursorHold
 
 autocmd FileType markdown let b:coc_suggest_disable = 1
