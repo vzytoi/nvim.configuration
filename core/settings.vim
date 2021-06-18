@@ -10,6 +10,7 @@ set scrolloff=8
 set mouse=a
 " remove bells
 set vb t_vb=
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set wildmenu
@@ -61,3 +62,10 @@ if has('persistent_undo')
     set undodir=$HOME/AppData/Local/nvim/tmp/undo/
     set undofile
 endif
+
+set timeout ttimeout
+set timeoutlen=500   " Time out on mappings
+set ttimeoutlen=10   " Time out on key codes
+set updatetime=100   " Idle time to write swap and trigger CursorHold
+
+autocmd FileType markdown let b:coc_suggest_disable = 1
