@@ -32,7 +32,7 @@ function! ToggleZoom(toggle)
 endfunction
 augroup restorezoom
     au WinEnter * silent! :call ToggleZoom(v:false)
-augroup ENDnoremap
+augroup END
 
 nnoremap <silent> <a-o> :call ToggleZoom(v:true)<CR>
 nnoremap <silent> <a-g> :Goyo<cr>
