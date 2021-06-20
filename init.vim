@@ -6,8 +6,8 @@
 "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║"
 "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝"
 
-" github : https://github.com/vzytoi/nvim.configuration
-" author : cyprien.henner@icloud.com
+" Author: Cyprien Henner
+" Email: cyprien.henner@icloud.com
 
 let mapleader = ' '
 
