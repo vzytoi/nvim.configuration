@@ -27,3 +27,9 @@ map g# <Plug>(incsearch-nohl-g#)
 set statusline=%{anzu#search_status()}
 
 let g:loaded_matchit = 1
+
+let g:matchup_matchparen_deferred = 1
+let g:matchup_matchparen_timeout = 100
+let g:matchup_matchparen_insert_timeout = 30
+let g:matchup_override_vimtex = 1
+let g:matchup_delim_noskips = 0
