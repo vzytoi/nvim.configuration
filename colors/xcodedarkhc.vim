@@ -5,8 +5,6 @@
 " License:      Vim License (see `:help license`)
 " Last Updated: Wed 18 Nov 14:46:29 2020
 
-" xcode0
-
 set background=dark
 
 hi clear
