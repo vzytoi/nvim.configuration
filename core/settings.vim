@@ -1,36 +1,5 @@
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
-set smarttab
-set autoindent
-set smartindent
-
-function! Preserve(command)
-    let search = @/
-    let cursor_position = getpos('.')
-    normal! H
-    let window_position = getpos('.')
-    call setpos('.', cursor_position)
-    execute a:command
-    let @/ = search
-    call setpos('.', window_position)
-    normal! zt
-    call setpos('.', cursor_position)
-endfunction
-
-function! Indent()
-    call Preserve('normal gg=G')
-endfunction
-
-nnoremap < <<
-nnoremap > >>
-
-vnoremap < <gv
-vnoremap > >gv
 
 set autochdir
-autocmd BufEnter * silent! lcd %:p:h
 
 set wildignore+=*/.git/*
 set lazyredraw
@@ -50,17 +19,6 @@ set completeopt=menuone,noinsert,noselect
 set nrformats+=alpha
 
 set spelllang=en_us,fr
-nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
-nnoremap U <c-r>
-
-" inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
-
-nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
-
-autocmd FileType javascript let b:coc_pairs_disabled = ['<', '>']
 
 set synmaxcol=200  " Text after this column number is not highlighted
 set nostartofline
@@ -91,3 +49,6 @@ if has('persistent_undo')
     set undodir=$HOME/AppData/Local/nvim/tmp/undo/
     set undofile
 endif
+
+set synmaxcol=200  " Text after this column number is not highlighted
+set nostartofline
