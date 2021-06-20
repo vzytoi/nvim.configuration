@@ -1,26 +1,29 @@
-" Number of spaces that a <Tab> counts for while
-" performing editing operations.
-" :h sts
+" Description: Number of spaces that a <Tab>
+" counts for while performing editing operations.
+" Help: `:h sts`
 set softtabstop=4
 
-" Number of spaces that a <Tab> in the file counts for.
-" :h ts
+" Description: Number of spaces that a <Tab>
+" in the file counts for.
+" Help: `:h ts`
 set tabstop=4
 
-" Use the appropriate number of spaces to insert a <Tab>.
-" :h et
+" Description: Use the appropriate number of
+" spaces to insert a <Tab>.
+" Help: `:h et`
 set expandtab
 
-" <Tab> insert blank in front of lines.
-" :h sta
+" Description: <Tab> insert blank in front of lines.
+" Help: `:h sta`
 set smarttab
 
-" Copy indent from current line when sstarting a new line.
-" :h ai
+" Description: Copy indent from current line
+" when sstarting a new line.
+" Help: `:h ai`
 set autoindent
 
-" Do smart autoindenting when starting a new line.
-" :h si
+" Description: Do smart autoindenting when starting a new line.
+" Help: `:h si`
 set smartindent
 
 nnoremap < <<
