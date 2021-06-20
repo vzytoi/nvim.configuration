@@ -28,6 +28,7 @@ nnoremap > >>
 
 vnoremap < <gv
 vnoremap > >gv
+
 set autochdir
 autocmd BufEnter * silent! lcd %:p:h
 
@@ -90,5 +91,3 @@ if has('persistent_undo')
     set undodir=$HOME/AppData/Local/nvim/tmp/undo/
     set undofile
 endif
-
-autocmd FileType markdown let b:coc_suggest_disable = 1
