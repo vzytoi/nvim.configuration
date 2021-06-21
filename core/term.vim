@@ -1,6 +1,6 @@
 " nnoremap <a-s> :vnew term://bash<cr>A
-nnoremap <a-s> :vsp\|term<cr>
-tnoremap <silent> <a-s> I<c-\><c-N>:bd!<cr>
+" nnoremap <a-s> :vsp\|term<cr>
+" tnoremap <silent> <a-s> I<c-\><c-N>:bd!<cr>
 
 tnoremap <esc> <c-\><c-N>
 
