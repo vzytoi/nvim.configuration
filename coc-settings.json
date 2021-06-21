@@ -43,5 +43,6 @@
     "prettier.singleQuote": true,
     "prettier.bracketSpacing": false,
     "coc.preferences.formatOnSaveFiletypes": ["css", "jsonc", "javascript"],
-    "coc.preferences.formatOnType": false
+    "coc.preferences.formatOnType": false,
+    "suggest.autoTrigger": "none"
 }
