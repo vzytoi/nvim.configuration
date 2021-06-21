@@ -36,10 +36,9 @@ let g:arrows = ['<Left>', '<Right>', '<Up>', '<Down>']
 autocmd FileType javascript let b:coc_pairs_disabled = ['<', '>']
 
 for s:mod in split(g:keymapmods, ',')
-    let s:m = split(s:mod, '\zs')[0]
-    execute s:m.'noremap <a-c> <esc>'
-    for s:arrow in g:arrows
-      execute s:m."noremap ".s:arrow." <Nop>"
+    execute s:mod[0].'noremap <a-c> <esc>'
+	for s:arrow in g:arrows
+		execute s:mod[0]."noremap ".s:arrow." <Nop>"
     endfor
 endfor
 
@@ -58,3 +57,60 @@ nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
 nnoremap U <c-r>
 
 autocmd BufEnter * silent! lcd %:p:h
+
+command! -nargs=? -complete=buffer -bang Bonly
+    \ :call BufOnly('<args>', '<bang>')
+command! -nargs=? -complete=buffer -bang BOnly
+    \ :call BufOnly('<args>', '<bang>')
+command! -nargs=? -complete=buffer -bang Bufonly
+    \ :call BufOnly('<args>', '<bang>')
+command! -nargs=? -complete=buffer -bang BufOnly
+    \ :call BufOnly('<args>', '<bang>')
+
+function! BufOnly(buffer, bang)
+	if a:buffer == ''
+		" No buffer provided, use the current buffer.
+		let buffer = bufnr('%')
+	elseif (a:buffer + 0) > 0
+		" A buffer number was provided.
+		let buffer = bufnr(a:buffer + 0)
+	else
+		" A buffer name was provided.
+		let buffer = bufnr(a:buffer)
+	endif
+
+	if buffer == -1
+		echohl ErrorMsg
+		echomsg "No matching buffer for" a:buffer
+		echohl None
+		return
+	endif
+
+	let last_buffer = bufnr('$')
+
+	let delete_count = 0
+	let n = 1
+	while n <= last_buffer
+		if n != buffer && buflisted(n)
+			if a:bang == '' && getbufvar(n, '&modified')
+				echohl ErrorMsg
+				echomsg 'No write since last change for buffer'
+							\ n '(add ! to override)'
+				echohl None
+			else
+				silent exe 'bdel' . a:bang . ' ' . n
+				if ! buflisted(n)
+					let delete_count = delete_count+1
+				endif
+			endif
+		endif
+		let n = n+1
+	endwhile
+
+	if delete_count == 1
+		echomsg delete_count "buffer deleted"
+	elseif delete_count > 1
+		echomsg delete_count "buffers deleted"
+	endif
+
+endfunction
