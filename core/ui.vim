@@ -1,4 +1,3 @@
-
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if has("termguicolors")
@@ -10,7 +9,7 @@ endif
 
 syntax enable
 set background=dark
-colorscheme gruvbox
+colorscheme xcodedarkhc
 " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=gray guibg=NONE
 
 set laststatus=2
