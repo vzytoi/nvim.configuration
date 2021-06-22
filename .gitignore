@@ -1,7 +1,5 @@
 .DS_STORE
 
-colors/devtools.vim
-
 tmp/swap/*
 !tmp/swap/.keep
 
@@ -12,7 +10,8 @@ plugged/*
 
 tests/*
 
-rcs/ctrlp.vim
+core/ctrlp.vim
+
 txt/ctrlp_ignore.txt
 
 spell/*
