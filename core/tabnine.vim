@@ -1,14 +1,3 @@
-" The *g:ycm_collect_identifiers_from_comments_and_strings* option
-"
-" When this option is set to '1', YCM's identifier completer will also collect
-" identifiers from strings and comments. Otherwise, the text in comments and
-" strings will be ignored.
-"
-" Default: '0'
-" >
-   let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" <
-
 " -------------------------------------------------------------------------------
 
 " The *g:ycm_key_list_select_completion* option
@@ -21,7 +10,7 @@
 
 " Default: "['<TAB>', '<Down>']"
 " >
- let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<C-j>', '<C-n>']
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<C-j>', '<C-n>']
 " <
 
 " ------------------------------------------------------------------------------
@@ -39,7 +28,7 @@
 
 " Default: "['<S-TAB>', '<Up>']"
 " >
- let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>', '<C-k>', '<C-p>']
+let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>', '<C-k>', '<C-p>']
 " <
 
 " -------------------------------------------------------------------------------
@@ -53,7 +42,7 @@
 
 " Default: "['<C-y>']"
 " >
- let g:ycm_key_list_stop_completion = ['<C-y>']
+let g:ycm_key_list_stop_completion = ['<C-y>', '<Cr>']
 " <
 
 " -------------------------------------------------------------------------------
@@ -69,17 +58,17 @@
 
 " Default: '[see next line]'
 " >
-  let g:ycm_filetype_blacklist = {
-        \ 'tagbar' : 1,
-        \ 'qf' : 1,
-        \ 'notes' : 1,
-        \ 'markdown' : 1,
-        \ 'unite' : 1,
-        \ 'text' : 1,
-        \ 'vimwiki' : 1,
-        \ 'pandoc' : 1,
-        \ 'infolog' : 1,
-        \ 'mail' : 1,
-        \ 'TelescopePrompt': 1
-        \}
+let g:ycm_filetype_blacklist = {
+                  \ 'tagbar' : 1,
+                  \ 'qf' : 1,
+                  \ 'notes' : 1,
+                  \ 'markdown' : 1,
+                  \ 'unite' : 1,
+                  \ 'text' : 1,
+                  \ 'vimwiki' : 1,
+                  \ 'pandoc' : 1,
+                  \ 'infolog' : 1,
+                  \ 'mail' : 1,
+                  \ 'TelescopePrompt': 1
+                  \}
 " <
