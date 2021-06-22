@@ -51,6 +51,15 @@ inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
+let g:MvVis_mappings = 0
+
+vmap H <Plug>(MvVisLeft)=gv
+vmap J <Plug>(MvVisDown)=gv
+vmap K <Plug>(MvVisUp)=gv
+vmap L <Plug>(MvVisRight)=gv
+
+nnoremap F <c-]>
+
 nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
 nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
