@@ -58,11 +58,12 @@ vmap J <Plug>(MvVisDown)=gv
 vmap K <Plug>(MvVisUp)=gv
 vmap L <Plug>(MvVisRight)=gv
 
-nnoremap F <c-]>
-
 nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
+nmap <silent> gd <Plug>(coc-definition)
+
 nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
+
 nnoremap U <c-r>
 
 autocmd BufEnter * silent! lcd %:p:h

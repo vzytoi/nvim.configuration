@@ -3,8 +3,8 @@ call plug#begin()
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive' " git
-Plug 'nvim-lua/popup.nvim'
 Plug 'ryanoasis/vim-devicons' " icons in nerd tree
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
