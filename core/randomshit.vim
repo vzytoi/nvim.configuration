@@ -53,10 +53,10 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
 
 let g:MvVis_mappings = 0
 
-vmap H <Plug>(MvVisLeft)=gv
+vmap H <Plug>(MvVisLeft)
 vmap J <Plug>(MvVisDown)=gv
 vmap K <Plug>(MvVisUp)=gv
-vmap L <Plug>(MvVisRight)=gv
+vmap L <Plug>(MvVisRight)
 
 nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
