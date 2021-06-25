@@ -61,6 +61,10 @@ vmap L <Plug>(MvVisRight)
 nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> rn <Plug>(coc-rename)
+nmap <silent> gp :<C-U>call CocAction('doHover')<CR>
+
+nnoremap <c-o> <c-o>zz
 
 nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
 
