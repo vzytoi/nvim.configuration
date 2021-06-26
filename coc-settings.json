@@ -44,5 +44,6 @@
     "prettier.bracketSpacing": false,
     "coc.preferences.formatOnSaveFiletypes": ["css", "jsonc", "javascript"],
     "coc.preferences.formatOnType": false,
-    "suggest.autoTrigger": "none"
+    "suggest.autoTrigger": "none",
+    "coc.preferences.hoverTarget": "float"
 }
