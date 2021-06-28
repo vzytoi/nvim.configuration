@@ -1,5 +1,7 @@
 call plug#begin()
 
+Plug 'tpope/vim-vinegar'
+
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive' " git
