@@ -58,6 +58,16 @@ vmap J <Plug>(MvVisDown)=gv
 vmap K <Plug>(MvVisUp)=gv
 vmap L <Plug>(MvVisRight)
 
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
 nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
 
 nmap <silent> gd <Plug>(coc-definition)
