@@ -20,7 +20,8 @@ set nrformats+=alpha
 
 set spelllang=en_us,fr
 
-set synmaxcol=200  " Text after this column number is not highlighted
+set numberwidth=1
+
 set nostartofline
 
 set formatoptions-=o         " Disable comment-continuation (normal 'o'/'O')
@@ -49,6 +50,3 @@ if has('persistent_undo')
     set undodir=$HOME/AppData/Local/nvim/tmp/undo/
     set undofile
 endif
-
-set synmaxcol=200  " Text after this column number is not highlighted
-set nostartofline
