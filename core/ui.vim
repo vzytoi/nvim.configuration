@@ -15,7 +15,7 @@ colorscheme xcodedarkhc
 set laststatus=2
 set statusline=
 set statusline+=\ %l
-set statusline+=:
+set statusline+=/
 set statusline+=%L
 set statusline+=\ \ %t
 
