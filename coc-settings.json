@@ -45,5 +45,13 @@
     "coc.preferences.formatOnSaveFiletypes": ["css", "jsonc", "javascript"],
     "coc.preferences.formatOnType": false,
     "suggest.autoTrigger": "none",
-    "coc.preferences.hoverTarget": "float"
+    /* "coc.preferences.hoverTarget": "float", */
+    "git.changedSign.text": "|",
+    "git.addedSign.text": "|",
+    "git.removedSign.text": "|",
+    "git.addedSign.hlGroup": "GitGutterAdd",
+    "git.changedSign.hlGroup": "GitGutterChange",
+    "git.removedSign.hlGroup": "GitGutterDelete",
+    "git.topRemovedSign.hlGroup": "GitGutterDelete",
+    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete"
 }
