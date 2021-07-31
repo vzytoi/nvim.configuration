@@ -20,8 +20,6 @@ set nrformats+=alpha
 
 set spelllang=en_us,fr
 
-set numberwidth=1
-
 set nostartofline
 
 set formatoptions-=o         " Disable comment-continuation (normal 'o'/'O')
