@@ -16,3 +16,4 @@ nnoremap <a-h> <c-w>W
 nnoremap <a-l> <c-w>w
 nnoremap <a-j> <c-w>j
 nnoremap <a-k> <c-w>k
+nnoremap <a-q> <c-w>q
