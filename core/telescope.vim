@@ -1,6 +1,7 @@
 nnoremap <silent> <a-s-e> :Telescope git_files<cr>
 nnoremap <silent> <a-s-s> :Telescope live_grep<cr>
 nnoremap <silent> <a-s-c> :Telescope git_commits<cr>
+nnoremap <silent> <a-s-b> :Telescope buffers<cr>
 
 nnoremap <silent> <leader>rc :Telescope find_files cwd=~/AppData/Local/nvim/<cr>
 
