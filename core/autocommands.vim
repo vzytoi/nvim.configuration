@@ -42,46 +42,6 @@ for s:mod in split(g:keymapmods, ',')
     endfor
 endfor
 
-nnoremap <silent> <Tab> :tabnext<CR>
-nnoremap <silent> <s-Tab> :tabprevious<CR>
-nnoremap <silent> <leader>l :SidewaysRight<cr>
-nnoremap <silent> <leader>h :SidewaysLeft<cr>
-
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<Up>"
-
-let g:MvVis_mappings = 0
-
-vmap H <Plug>(MvVisLeft)
-vmap J <Plug>(MvVisDown)=gv
-vmap K <Plug>(MvVisUp)=gv
-vmap L <Plug>(MvVisRight)
-
-nnoremap Y y$
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap J mzJ`z
-
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
-
-nnoremap <silent> <a-i> :CocCommand prettier.formatFile<cr>
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> rn <Plug>(coc-rename)
-nmap <silent> gp :<C-U>call CocAction('doHover')<CR>
-
-nmap <silent> <leader>tg :CocCommand git.toggleGutters<cr>
-
-nnoremap <c-o> <c-o>zz
-
-nnoremap <silent> <leader>c :set spell!<cr>:echo &spell==0?"off":"on"<cr>
-
-nnoremap U <c-r>
-
 autocmd BufEnter * silent! lcd %:p:h
 
 command! -nargs=? -complete=buffer -bang Bonly
@@ -140,3 +100,84 @@ function! BufOnly(buffer, bang)
 	endif
 
 endfunction
+
+function SplitResize(k)
+    if ((a:k == "h" && winnr() == 1) || (a:k == "l" && winnr() == winnr('$')))
+        execute ":vert res -5"
+    elseif ((a:k == "l" && winnr() == 1) || (a:k == "h" && winnr() == winnr('$')))
+        execute ":vert res +5"
+    endif
+endfunction
+
+autocmd BufEnter * if (winnr('$') == 1 && &filetype == 'coc-explorer') | q | endif
+
+augroup term_settings
+  autocmd!
+  " Do not use number and relative number for terminal inside nvim
+  autocmd TermOpen * setlocal norelativenumber nonumber
+  " Go to insert mode by default to start typing command
+  autocmd TermOpen * startinsert
+augroup END
+
+function TogglePS()
+  let s:wn = expand('%:t')
+  if s:wn == 'Powershell.EXE'
+    execute "bd!"
+  else
+    execute "vsp\|term"
+  endif
+endfunction
+
+" focus split (alt o)
+function! ToggleZoom(toggle)
+    if exists("t:restore_zoom") && (t:restore_zoom.win != winnr() || a:toggle == v:true)
+        exec t:restore_zoom.cmd
+        unlet t:restore_zoom
+    elseif a:toggle
+        let t:restore_zoom = { 'win': winnr(), 'cmd': winrestcmd() }
+        vert resize | resize
+    endif
+endfunction
+
+augroup restorezoom
+    au WinEnter * silent! :call ToggleZoom(v:false)
+	command! -nargs=1 Math call s:Calc(<f-args>)
+augroup END
+
+function s:Calc(calcul)
+
+    let s:filename = stdpath('config') . '/txt/math_history.txt'
+    let s:opp = a:calcul
+    let h = readfile(s:filename)
+
+    if stridx(a:calcul, '?') != -1
+        let s:opp = substitute(a:calcul, "?", h[-1], "")
+    endif
+
+    let h = add(h, s:opp)
+    echo system('python -c "from math import *; print('.s:opp.')"')
+    call writefile(h, s:filename)
+
+endfunction
+
+let nkeys = {'1':"&",'2':"é",'3':'"','4':"'",'5':"(",'6':"-",'7':"è",'8':"_",'9':"ç",'0':"à"}
+
+for i in range(1, 50)
+    let arr = []
+    for l in split(string(i), '\zs')
+        let arr = add(arr, nkeys[l])
+    endfor
+    for s:mod in ['n', 'v']
+        execute s:mod.'noremap '. join(arr, '').'<leader> '.i.'k'
+        execute s:mod.'noremap <leader>'. join(arr, '').' '.i.'j'
+    endfor
+endfor
+
+augroup numbertoggle
+  autocmd!
+  autocmd InsertEnter * set nu nornu
+  autocmd InsertLeave * set rnu nonu
+augroup END
+
+" Equalize window dimensions when resizing vim window
+autocmd VimResized * tabdo wincmd =
