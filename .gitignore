@@ -8,7 +8,7 @@ tmp/undo/*
 
 plugged/*
 
-tests/*
+test/*
 
 core/ctrlp.vim
 
