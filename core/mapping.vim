@@ -12,6 +12,7 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
 nnoremap U <c-r>
+nnoremap <a-c> <c-c>
 
 nnoremap <c-o> <c-o>zz
 
